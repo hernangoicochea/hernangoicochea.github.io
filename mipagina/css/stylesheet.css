@@ -1,0 +1,212 @@
+/***********************************************************
+************************************************************
+Author: Your Name
+Author website: add your url
+License or copyright: Add copyright info if you want to
+Version: you may want to say which version of template is
+this or not
+************************************************************
+***********************************************************/
+
+/***********************************
+COLORS
+Palette
+#000000  - black
+#ffffff  - white
+#4286f4  - navy blue
+
+Colors applied
+#000000  - black - Text, blockquote, captions
+#ffffff  - white - Body background, header text
+#4286f4  - navy blue - Links and header background
+***********************************/
+
+/***********************************
+LINKS
+Header and Footer
+a (standard):   #ffffff - white (text decoration none)
+a (hover):      #ffffff - white (text decoration: underline)
+Body text
+a (standard):   #4286f4  - navy blue
+a (hover):      #4286f4  - navy blue - #000000 - black (text decoration: underline)
+***********************************/
+
+/**********************************
+FONTS
+Sans-serif / serif combination
+font-family: 'Oswald', sans-serif; 400
+font-family: 'Manuale', serif; 400
+Pairings, weights and sizes
+- Header h1 (title): Oswald, sans-serif; font-size: 56px; font-weight: 400; line-height: 1.3;
+- Header h2 (summary): Oswald, sans-serif; font-size: 32px; font-weight: 700; line-height: 1.3;
+- Header h3 (byline): Oswald, sans-serif; font-size: 18px; font-weight: 400;
+- Body text: 'Manuale', serif; font-size: 16px; font-weight: 400; line-height: 1.5;
+- Blockquotes: 'Manuale', serif; font-size: 24px; font-weight: inherit; line-height: inherit;
+- Figcaptions: 'Manuale', serif; font-size: inherits; font-weight: inherit; line-height: 1.1;
+********************************************/
+
+/******************************************************
+TABLE OF CONTENTS
+1. Global styles (things that apply to all elements of site: general display, general margin, general font)
+2. Header content
+3. Main body Content (headings, images and figures, blockquotes)
+4. Footer content
+5. Media queries
+******************************************************/
+
+
+/******************************************************
+1. Global styles
+******************************************************/
+
+/*Make everything inside the <html> act as a block.
+box-sizing: used to tell the browser what the sizing properties (width and height) should include.
+border-box: The width and height properties (and min/max properties) includes content, padding and border, but not the margin */
+html {
+  box-sizing: border-box;
+}
+/* The asterisk * used below means wildcard or affect everything.
+box-sizing: inherit, means inherit the property border-box from its parent element html.
+Check what the pseudo elements :before and :after are for https://www.w3schools.com/CSS/css_pseudo_elements.asp */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*rules for all the body text
+you can give specific text elements their own rules by adding a selector { property: value;} When you do, you override this global rule*/
+
+body {
+  font-family: 'Manuale', serif; /* font */
+  font-size: 16px; /* 16px is the standard font size */
+  line-height: 1.5; /* 1.5 times the size of the font */
+  background-color: #FCFCFC;
+  background-size: cover;
+}
+
+
+/******************************************************
+2. Header content
+******************************************************/
+
+/* Header */
+header {
+  background-color: #2B2B2B; /*navy blue*/
+  /* If you wanted you could add a
+    background-image. For this you can type, before background-color the property and value
+    background-image:url("insert here th url of the image");  */
+  background-size: cover; /* Means cover the entire element. Examples
+https://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size&preval=cover */
+  color: #ffffff;
+  font-family: Oswald, sans-serif;/*use for everything inside header*/
+  font-weight: 400;
+  text-align: center;/* align all text inside header to the center*/
+  padding: 10px;
+}
+
+header h1 {
+  font-size: 42px;
+  line-height: 1.3;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #0C7A66;
+}
+
+header h2 {
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+header h3 {
+  font-size: 17px;
+}
+
+header h3 a {
+  text-decoration: none;
+  color: #B05907;
+}
+header h3 a:hover {
+  text-decoration: underline;
+}
+header p {
+  font-size: 13px;
+}
+
+/******************************************************
+3. Main body content
+******************************************************/
+
+article {
+  max-width: 700px;
+  padding: 40px;
+  margin: 0 auto;
+  border: 0;
+}
+
+
+/* Main rule that applies to all text content in the body
+
+body {
+  float: left;
+  margin-left: 340px;
+}
+
+
+*/
+
+/* First exception of the Main rule */
+
+h1, h2, h3 {
+  font-family: Oswald, sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+figure {
+  display: block;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  text-align: center;
+  padding: 2px 2px;
+  font-size: 13.5px;
+  font-style: oblique;
+}
+
+.quotebox {
+  float: left;
+  width: 220px;
+  font-style: italic;
+  font-size: 24px;
+}
+
+
+/*div container for the 3 images and caption, learn more about flex models*/
+.img-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 700px;
+}
+
+.img-wrapper figure {width: 200px;}
+
+@media (max-width: 700px) {
+  Body {
+    background: white;
+  }
+}
+
+/******************************************************
+4. Footer content
+******************************************************/
+
+/******************************************************
+5. Media queries TBD
+******************************************************/
